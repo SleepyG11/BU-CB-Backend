@@ -16,7 +16,7 @@ app.use((error, req, res, next) => {
 });
 
 Database.sequelize.sync().then(() => {
-	app.listen(5000, () => {
+	app.listen(+process.env.APP_PORT, process.env.APP_HOST, () => {
 		console.log('Server started');
 	});
 });
