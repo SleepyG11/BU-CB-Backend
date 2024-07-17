@@ -1,7 +1,7 @@
 /**
  * @type {import("jsonschema").Schema}
  */
-const schema = {
+const SubmitScoreSchema = {
 	type: 'object',
 	additionalProperties: false,
 	properties: {
@@ -10,6 +10,7 @@ const schema = {
 		},
 		username: {
 			type: ['string'],
+			maxLength: 256,
 		},
 		nonEndlessScore: {
 			type: ['integer'],
@@ -36,12 +37,14 @@ const schema = {
 		},
 		gameVersion: {
 			type: ['string'],
+			maxLength: 32,
 		},
 		modVersion: {
 			type: ['string'],
+			maxLength: 32,
 		},
 	},
 	required: ['userId', 'username', 'startsFromEndless', 'gameVersion', 'modVersion'],
 };
 
-export default schema;
+export default SubmitScoreSchema;

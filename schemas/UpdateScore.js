@@ -1,26 +1,31 @@
 /**
  * @type {import("jsonschema").Schema}
  */
-const schema = {
+const UpdateScoreSchema = {
 	type: 'object',
 	additionalProperties: false,
 	properties: {
 		nonEndlessScore: {
-			type: ['number'],
+			type: ['integer'],
+			minimum: -1,
 		},
 		endlessScore: {
-			type: ['number'],
+			type: ['integer'],
+			minimum: -1,
 		},
 		oneHourScore: {
-			type: ['number'],
+			type: ['integer'],
+			minimum: -1,
 		},
 		nonEndlessTime: {
-			type: ['number'],
+			type: ['integer'],
+			minimum: 0,
 		},
 		endlessTime: {
-			type: ['number'],
+			type: ['integer'],
+			minimum: 0,
 		},
 	},
 };
 
-export default schema;
+export default UpdateScoreSchema;
