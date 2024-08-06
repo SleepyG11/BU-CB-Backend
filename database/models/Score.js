@@ -140,7 +140,7 @@ export default class Score extends Model {
 				},
 				username: {
 					type: DataTypes.STRING(256),
-					allowNull: false,
+					allowNull: true,
 				},
 				nonEndlessScore: {
 					type: DataTypes.DOUBLE,

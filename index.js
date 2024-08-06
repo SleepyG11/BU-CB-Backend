@@ -15,7 +15,7 @@ app.use((error, req, res, next) => {
 	res.status(error.status).send(error);
 });
 
-Database.sequelize.sync().then(() => {
+Database.sequelize.sync({ alter: true }).then(() => {
 	app.listen(+process.env.APP_PORT, process.env.APP_HOST, () => {
 		console.log('Server started');
 	});

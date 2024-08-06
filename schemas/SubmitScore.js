@@ -44,7 +44,7 @@ const SubmitScoreSchema = {
 			maxLength: 32,
 		},
 	},
-	required: ['userId', 'username', 'startsFromEndless', 'gameVersion', 'modVersion'],
+	required: ['userId', 'startsFromEndless', 'gameVersion', 'modVersion'],
 };
 
 export default SubmitScoreSchema;
